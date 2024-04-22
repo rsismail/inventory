@@ -6,33 +6,15 @@
 .appContainer{
   width: 100vw;
   height: 100vh;
-  background-color: #e1e1e1;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 40px;
 }
-.btn button{
-  width: 100px;
-  height: 20px;
-  background-color: rgb(166, 225, 166);
-  border: none;
-}
-.customBtn{
-  border: none;
-  border-radius: 5px;
-  height: 40px;
-  font-size: 12px;
-  width: 100px;
-  color: #fff;
-}
-
-.light{
-  background-color: #fff;
-  color: #000;
-}
-
-.dark{
-  background-color: #000;
-  color: #fff;
+.employeeTableContainer{
+  width: 90vw;
+  height: 90vh;
+  background-color: #ffffff;
 }
