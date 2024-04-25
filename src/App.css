@@ -5,35 +5,12 @@
 }
 .appContainer{
   width: 100vw;
-  height: fit-content;
-  background-color: #5d5d5d;
+  height: 100vh;
+  background-color: #161616;
   display: flex;
-  justify-content: center;
-  padding: 40px;
-  padding-bottom: 10rem;
+  flex-direction: column;
+  padding: 0 2.4rem;
 }
-.leftnav{
-  width: 8rem;
-  height: 94vh;
-  background-color: #fcfcfc;
-  border-radius: 10px;
-}
-.centerContent {
-  width: 90vw;
-  height: 95%;
-  background-color: #f0f0f0;
-  margin: 0 2.4rem;
-  padding: 2.4rem;
-  border-radius: 10px;
-}
-
-.rightContent {
-  width: 20vw;
-  height: 95%;
-  background-color: #c34f4f;
-  border-radius: 10px;
-}
-.imageSvg{
-  width: 4rem;
-  height: 4rem;
+.modalContainer{
+  background-color: #313131;
 }
