@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setProductList, setDisableList } from '../../store/reducer';
 import EditModal from './EditModal';
 
-const ProductListView = () => {
+const ProductListView = (props) => {
+    const { isUser } = props;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProductName, setSelectedProductName] = useState('');
     const dispatch = useDispatch();
     const handleCancel = () => {
       setIsModalOpen(false);
     };
+    const isRowDisabled = (name) => {
+        return isUser || disableList.includes(name)
+    }
     const { productList, disableList } = useSelector(store => store.inventory);
 
     const handleEdit = (name) => {
@@ -47,16 +51,16 @@ const ProductListView = () => {
                     {
                         productList.map(({ name, category, value, quantity, price }) => {
                             return (<tr className={styles.tableBody}>
-                                <td style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}}>{name}</td>
-                                <td style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}}>{category}</td>
-                                <td style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}}>{value}</td>
-                                <td style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}}>{quantity}</td>
-                                <td style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}}>{price}</td>
+                                <td style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}}>{name}</td>
+                                <td style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}}>{category}</td>
+                                <td style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}}>{value}</td>
+                                <td style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}}>{quantity}</td>
+                                <td style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}}>{price}</td>
                                 <td>
                                     <div className={styles.actionContainer}>
-                                        <div style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}} onClick={() => { if (!disableList.includes(name)) handleEdit(name)}}>Edit</div>
-                                        <div style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}} onClick={() => handleDisable(name)}>disable</div>
-                                        <div style={{ color: disableList.includes(name) ? '#070808' : '#5c5c5c'}} onClick={() => {if (!disableList.includes(name)) handleDelete(name)}}>delete</div>
+                                        <div style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}} onClick={() => { if (isRowDisabled(name)) handleEdit(name)}}>Edit</div>
+                                        <div style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}} onClick={() => handleDisable(name)}>disable</div>
+                                        <div style={{ color: isRowDisabled(name) ? '#070808' : '#5c5c5c'}} onClick={() => {if (isRowDisabled(name)) handleDelete(name)}}>delete</div>
                                     </div>
                                 </td>
                             </tr>)
