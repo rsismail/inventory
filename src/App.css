@@ -5,7 +5,7 @@
 }
 /* src/ArabicKeyboard.css */
 .App {
-  padding: 80px;
+  padding: 20px;
 }
 .keyboardInput {
   display: inline-block;
@@ -32,15 +32,26 @@
 .key {
   flex: 1;
   margin: 2px;
-  padding: 10px;
-  font-size: 16px;
+  padding: 6px;
+  font-size: 8px;
   cursor: pointer;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: #fff;
   transition: background-color 0.2s;
 }
 
 .key:hover {
   background-color: #fbeed7;
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding: 60px;
+  }
+  .key {
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 10px;
+  }
 }
