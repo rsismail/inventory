@@ -1,86 +1,24 @@
+@font-face {
+  font-family: 'biotif';
+  src:
+    url('./assets/fonts/dm-sans.woff2') format('woff2 supports variations'),
+    url('./assets/fonts/dm-sans.woff2') format('woff2-variations');
+  font-weight: 100 1000;
+  font-style: normal;
+}
+html {
+  font-family: 'biotif';
+  font-size: 100%;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* src/ArabicKeyboard.css */
+
 .App {
-  padding: 20px;
-}
-.keyboardInput {
-  display: inline-block;
-  width: 100%;
-  margin-top: 40px;
-  font-size: 24px;
-  border: 1px solid #b8b8b8;
-  border-radius: 5px;
-  outline: none;
-  padding: 4px;
-}
-.arabic-keyboard {
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.keyboard-row {
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.key {
-  flex: 1;
-  margin: 2px;
-  padding: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  color: #000;
+  width: 100vw;
+  height: 100vh;
   background-color: #fff;
-  transition: background-color 0.2s;
-}
-
-.key:hover {
-  background-color: #fbeed7;
-}
-
-.actionContainer{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-wrap: wrap;
-   margin: 20px;
-}
-.actionContainer button {
-  height: 28px;
-  width: 60px;
-  font-size: 10px;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 600px;
-  background-color: #00804b;
-  cursor: pointer;
-  margin-right: 24px;
-  margin-bottom: 24px;
-}
-@media (min-width: 768px) {
-  .App {
-    padding: 60px;
-  }
-  .key {
-    font-size: 16px;
-    border-radius: 2px;
-    padding: 10px;
-  }
-  .keyboardInput {
-    padding: 10px;
-  }
-  .actionContainer button {
-    height: 40px;
-    width: 100px;
-    font-size: 14px;
-  }
 }
