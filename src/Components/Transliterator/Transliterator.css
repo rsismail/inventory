@@ -10,8 +10,8 @@ body {
 }
 
 .translate-container {
-  /* width: 98vw; */
-  height: 95vh;
+  width: 98%;
+  height: 95%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -224,10 +224,10 @@ body {
     margin: 5px 0;
   }
 
-  .translate-container {
-    height: 100vh;
+  /* .translate-container {
+    height: 95%;
     overflow: auto;
-  }
+  } */
 
   .header h1 {
     font-size: 18px;
