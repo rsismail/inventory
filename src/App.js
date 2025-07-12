@@ -4,18 +4,15 @@ import Keyboard from './Components/Keyboard';
 import Transliterator from './Components/Transliterator';
 
 const App = () => {
-
-
-
   return (
     <div className="App">
-    <Router>
-      <Routes>
-        <Route path="/arwi-transliterator" element={<Transliterator />} />
-        <Route path="/arwi-keyboard" element={<Keyboard />} />
-        <Route path="*" element={<Navigate to="/arwi-transliterator" />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="arwi-transliterator" element={<Transliterator />} />
+          <Route path="arwi-keyboard" element={<Keyboard />} />
+          <Route path="*" element={<Navigate to="arwi-transliterator" />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
