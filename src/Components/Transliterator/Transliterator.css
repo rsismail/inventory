@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f2f5;
+  background-color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .translate-container {
-  width: 98vw;
+  /* width: 98vw; */
   height: 95vh;
   background-color: #fff;
   border-radius: 10px;
