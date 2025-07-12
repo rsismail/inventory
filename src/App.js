@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Keyboard from './Components/Keyboard';
+import Transliterator from './Components/Transliterator';
 
 const App = () => {
 
 
+
   return (
     <div className="App">
-      <Keyboard />
+    <Router>
+      <Routes>
+        <Route path="/arwi-transliterator" element={<Transliterator />} />
+        <Route path="/arwi-keyboard" element={<Keyboard />} />
+        <Route path="*" element={<Navigate to="/arwi-transliterator" />} />
+      </Routes>
+    </Router>
     </div>
   );
 };

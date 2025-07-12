@@ -4,11 +4,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@reduxjs/toolkit": "^2.2.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.16.2",
+    "axios": "^1.8.3",
     "apexcharts": "^3.49.0",
     "gsap": "^3.12.5",
     "immer": "^10.0.4",
